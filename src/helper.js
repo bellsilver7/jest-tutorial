@@ -30,6 +30,42 @@ const helper = {
       }, 1000);
     });
   },
+  connectUserDb: () => {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve({
+          name: "홍길동",
+          age: 30,
+          gender: "남자",
+        });
+      }, 500);
+    });
+  },
+  disconnectUserDb: () => {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve();
+      }, 500);
+    });
+  },
+  connectCarDb: () => {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve({
+          brand: "현대",
+          name: "아이오닉",
+          color: "실버",
+        });
+      }, 500);
+    });
+  },
+  disconnectCarDb: () => {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve();
+      }, 500);
+    });
+  },
 };
 
 module.exports = helper;
